@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js"
 
 const firebaseConfig = {
-
+    databaseURL: "https://leads-tracker-app-7acd6-default-rtdb.firebaseio.com/"
 }
 
 const app = initializeApp(firebaseConfig)
