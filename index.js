@@ -2,13 +2,11 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebas
 import { getDatabase } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js"
 
 const firebaseConfig = {
-    databaseURL: process.env.DATABASE_URL
+    databaseURL: "https://leads-tracker-app-7acd6-default-rtdb.firebaseio.com/"
 }
 
 const app = initializeApp(firebaseConfig)
 const database = getDatabase(app)
-
-console.log(firebaseConfig.databaseURL)
 
 console.log(app)
 
@@ -26,14 +24,6 @@ if (leadsFromLocalStorage) {
 }
 
 
-
-tabBtn.addEventListener("click", function() {
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        myLeads.push(tabs[0].url)
-        localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-        render(myLeads)
-    })
-})
 
 function render(leads) {
     let listItems = ""
