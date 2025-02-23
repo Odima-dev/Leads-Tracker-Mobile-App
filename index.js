@@ -8,7 +8,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const database = getDatabase(app)
 
-console.log(database)
+console.log(firebaseConfig.databaseURL)
 
 console.log(app)
 
