@@ -1,5 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js";
+import { getDatabase,
+    ref,
+    push
+ } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js";
 
 
 const firebaseConfig = {
@@ -8,19 +11,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 const database = getDatabase(app)
-
-
-/*mport { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js"
-import { getDatabase } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js"
-
-const firebaseConfig = {
-    databaseURL: "https://leads-tracker-app-7acd6-default-rtdb.firebaseio.com/"
-}
-
-const app = initializeApp(firebaseConfig)
-const database = getDatabase(app)
-
-console.log(app) */
+const referenceInDB = ref(database, "leads")
 
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
@@ -46,6 +37,6 @@ deleteBtn.addEventListener("dblclick", function() {
 })
 
 inputBtn.addEventListener("click", function() {
-    console.log(inputEl.value)
+    push(referenceInDB, inputEl.value)
     inputEl.value = ""
 })
