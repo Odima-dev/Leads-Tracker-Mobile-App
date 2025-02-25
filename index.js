@@ -1,3 +1,4 @@
+//Loading Firebase SDK into the app
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
 import { getDatabase,
     ref,
@@ -37,6 +38,7 @@ deleteBtn.addEventListener("dblclick", function() {
 })
 
 inputBtn.addEventListener("click", function() {
+    //pushing user input into referenced firebase database
     push(referenceInDB, inputEl.value)
     inputEl.value = ""
 })
