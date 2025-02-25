@@ -18,6 +18,11 @@ const ulEl = document.getElementById("ul-el")
 onValue(referenceInDB, function(snapshot){
     const snapshotValues = snapshot.val()
     const leads = Object.values(snapshotValues)
+    console.log(leads)
+    ulEl.innerHTML = `
+        <li> ${leads} </li>
+    ` 
+   console.log(ulEl)
 })
 
 function render(leads) {
