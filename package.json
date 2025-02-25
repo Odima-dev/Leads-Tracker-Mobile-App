@@ -1,0 +1,23 @@
+{
+  "name": "leads-tracker-mobile-app",
+  "version": "1.0.0",
+  "description": "Lead Tracker Mobile App resembles Lead Tracker Chrome extension, only that this one is created as a mobile app using Firebase.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Odima-dev/Leads-Tracker-Mobile-App.git"
+  },
+  "keywords": [],
+  "author": "https://github.com/Odima-dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Odima-dev/Leads-Tracker-Mobile-App/issues"
+  },
+  "homepage": "https://github.com/Odima-dev/Leads-Tracker-Mobile-App#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}

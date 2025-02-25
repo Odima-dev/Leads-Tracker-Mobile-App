@@ -1,3 +1,5 @@
+//Loaidng environment variable
+require('dotenv').config()
 //Loading Firebase SDK into the app
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
 import { getDatabase,
