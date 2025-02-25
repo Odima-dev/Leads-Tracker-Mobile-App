@@ -18,7 +18,6 @@ const ulEl = document.getElementById("ul-el")
 onValue(referenceInDB, function(snapshot){
     const snapshotValues = snapshot.val()
     const leads = Object.values(snapshotValues)
-    console.log(leads)
 })
 
 function render(leads) {
