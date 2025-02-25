@@ -1,4 +1,13 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js"
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+
+const firebaseConfig = {
+
+}
+
+const app = initializeApp(firebaseConfig)
+
+
+/*mport { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js"
 import { getDatabase } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js"
 
 const firebaseConfig = {
@@ -8,7 +17,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const database = getDatabase(app)
 
-console.log(app)
+console.log(app) */
 
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
