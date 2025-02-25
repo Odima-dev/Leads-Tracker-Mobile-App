@@ -2,7 +2,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
 import { getDatabase,
     ref,
-    push
+    push,
+    onValue
  } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js";
 
 const app = initializeApp(firebaseConfig)
@@ -13,6 +14,10 @@ const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const deleteBtn = document.getElementById("delete-btn");
 const ulEl = document.getElementById("ul-el")
+
+onValue(referenceInDB, function(snapshot){
+    console.log(snapshot.val())
+})
 
 function render(leads) {
     let listItems = ""
