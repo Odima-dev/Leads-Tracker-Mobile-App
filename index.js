@@ -3,7 +3,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebas
 import { getDatabase,
     ref,
     push,
-    onValue
+    onValue,
+    remove
  } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js";
 
 const app = initializeApp(firebaseConfig)
@@ -19,10 +20,7 @@ onValue(referenceInDB, function(snapshot){
     const snapshotValues = snapshot.val()
     const leads = Object.values(snapshotValues)
     console.log(leads)
-    ulEl.innerHTML = `
-        <li> ${leads} </li>
-    ` 
-   console.log(ulEl)
+    render(leads)
 })
 
 function render(leads) {
@@ -40,8 +38,8 @@ function render(leads) {
 }
  
 deleteBtn.addEventListener("dblclick", function() {
-    render(myLeads)
-})
+    remove(referenceInDB)
+    ulEl.innerHTML = ""
 
 inputBtn.addEventListener("click", function() {
     //pushing user input into referenced firebase database
