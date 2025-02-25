@@ -18,9 +18,11 @@ const ulEl = document.getElementById("ul-el")
 
 onValue(referenceInDB, function(snapshot){
    const snapshotExists = snapshot.exists()
+   //setting function to only run the code below if snapshot exists, to eliminate null error during deletion
    if(snapshotExists) {
     const snapshotValues = snapshot.val()
     const leads = Object.values(snapshotValues)
+    //rendering database items to the page
     render(leads)
    }
 })
