@@ -17,10 +17,12 @@ const deleteBtn = document.getElementById("delete-btn");
 const ulEl = document.getElementById("ul-el")
 
 onValue(referenceInDB, function(snapshot){
+   const snapshotExists = snapshot.exists()
+   if(snapshotExists) {
     const snapshotValues = snapshot.val()
     const leads = Object.values(snapshotValues)
-    console.log(leads)
     render(leads)
+   }
 })
 
 function render(leads) {
