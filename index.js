@@ -40,6 +40,7 @@ function render(leads) {
 deleteBtn.addEventListener("dblclick", function() {
     remove(referenceInDB)
     ulEl.innerHTML = ""
+})
 
 inputBtn.addEventListener("click", function() {
     //pushing user input into referenced firebase database
