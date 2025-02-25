@@ -1,5 +1,5 @@
 //Loaidng environment variable
-require('dotenv').config()
+//require('dotenv').config()
 
 //Loading Firebase SDK into the app
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
@@ -10,7 +10,7 @@ import { getDatabase,
 
 
 const firebaseConfig = {
-    databaseURL: "https://leads-tracker-app-7acd6-default-rtdb.firebaseio.com/"
+    databaseURL: process.env.DATABASE_URL
 }
 
 const app = initializeApp(firebaseConfig)
