@@ -16,7 +16,8 @@ const deleteBtn = document.getElementById("delete-btn");
 const ulEl = document.getElementById("ul-el")
 
 onValue(referenceInDB, function(snapshot){
-    console.log(snapshot.val())
+    const snapshotValues = snapshot.val()
+    const leads = 
 })
 
 function render(leads) {
