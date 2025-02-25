@@ -1,10 +1,13 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js";
+
 
 const firebaseConfig = {
-
+    databaseURL: "https://leads-tracker-app-7acd6-default-rtdb.firebaseio.com/"
 }
 
 const app = initializeApp(firebaseConfig)
+const database = getDatabase(app)
 
 
 /*mport { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js"
